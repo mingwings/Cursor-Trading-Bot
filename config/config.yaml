@@ -1,0 +1,54 @@
+# Trading Configuration
+trading:
+  pairs:
+    - BTC-USDT
+    - ETH-USDT
+  base_currency: USDT
+  trade_amount: 100  # Amount in base currency per trade
+  max_open_trades: 3
+  stop_loss_percentage: 2.0
+  take_profit_percentage: 4.0
+
+# MACD Strategy Parameters
+macd:
+  fast_period: 12
+  slow_period: 26
+  signal_period: 9
+
+# Machine Learning Parameters
+ml:
+  window_size: 100  # Number of candles for sliding window
+  retrain_interval: 24  # Hours between model retraining
+  min_samples_for_training: 1000
+  feature_columns:
+    - close
+    - volume
+    - macd
+    - macd_signal
+    - macd_hist
+    - rsi
+    - bollinger_upper
+    - bollinger_lower
+  target_column: future_return
+  prediction_threshold: 0.6  # Minimum confidence for trade execution
+
+# Risk Management
+risk:
+  max_daily_trades: 10
+  max_daily_loss_percentage: 5.0
+  position_sizing:
+    base_risk_per_trade: 1.0  # Percentage of portfolio
+    max_risk_per_trade: 2.0   # Maximum percentage of portfolio
+
+# API Configuration
+api:
+  retry_attempts: 3
+  retry_delay: 5  # seconds
+  websocket_timeout: 30  # seconds
+
+# Logging
+logging:
+  level: INFO
+  file: logs/trading_bot.log
+  max_file_size: 10485760  # 10MB
+  backup_count: 5 

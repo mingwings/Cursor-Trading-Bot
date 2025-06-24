@@ -1,0 +1,7 @@
+Backtest Results:
+Total Trades: 109
+Win Rate: 67.89%
+Profit Factor: 5818423.24
+Sharpe Ratio: 0.38
+Max Drawdown: -25571.94%
+Total Return: 7455762499328537124169087234029707537601033062530883974049300480.00%
