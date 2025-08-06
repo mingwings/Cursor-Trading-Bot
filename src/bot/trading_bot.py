@@ -12,10 +12,10 @@ import uuid
 from dotenv import load_dotenv
 import json
 
-from ..data.data_fetcher import DataFetcher
-from .strategy import BollingerBandStrategy
-from .risk_manager import RiskManager
-from ..ml.model import MLModel
+from src.data.data_fetcher import DataFetcher
+from src.bot.strategy import BollingerBandStrategy
+from src.bot.risk_manager import RiskManager
+from src.ml.model import MLModel
 
 class TradingBot:
     def __init__(self, trading_pair='ETHUSDT', interval='5'):
