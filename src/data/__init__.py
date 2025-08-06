@@ -2,6 +2,6 @@
 Data fetching and processing components
 """
 
-from .data_fetcher import DataFetcher
+from src.data.data_fetcher import DataFetcher
  
 __all__ = ['DataFetcher'] 
